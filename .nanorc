@@ -1,0 +1,18 @@
+include "/usr/share/nano/*.nanorc"
+set linenumbers
+set nohelp
+set brackets ""')>]}"
+set matchbrackets "(<[{)>]}"
+set morespace
+set nonewlines
+set regexp
+unset cutfromcursor
+unset preserve
+unset softwrap
+set positionlog
+
+set tabsize 2
+
+set titlecolor brightblack,white
+set numbercolor brightblack,white
+set statuscolor brightblack,white
