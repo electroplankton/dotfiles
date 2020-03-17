@@ -32,7 +32,7 @@ alias journalctl="sudo journalctl"
 alias yum="sudo dnf-3"
 #dead alias clear='$([ $[$RANDOM % 10] = 0 ]) && cbeams -o || clear'
 
-git config --global user.signingkey E31BE78E2F85ACE2
+git config --global user.signingkey probably not gonna add this
 
 PS1="${c1}[${c2}\u${c3}@${c4}\h${c1}] ${c5}<${c6}\w${c5}>\n${c7}${pr}${nc}"
 
