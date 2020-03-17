@@ -1,0 +1,39 @@
+#!/bin/bash
+PATH=$PATH:/usr/pbin:/srv/exec:/srv/bin/:/usr/local/bin/
+
+help() {
+	echo	"Custom services:"
+	echo	"ts3  		-> Teamspeak 3 Voice server (epdn)"
+	echo	"ts3s 		-> Teamspeak 3 Voice server (alt)"
+	echo	"gmod-ttt -> gmod TTT server (srcds64)"
+	echo	"echat 		-> p8081? chat server websockets"
+	echo	"nginx-[port]-[wd] -> opens nginx with root of $wd on $port"
+	echo	"epdn-hb	-> heartbeat for lan that isnt fucky"
+}
+
+alias rel="exec bash"
+alias fcr="sudo firewall-cmd --reload"
+alias fc="sudo firewall-cmd"
+alias ctl="sudo systemctl"
+alias ytdl="youtube-dl -x --add-metadata --no-call-home --embed-thumbnail --audio-format mp3"
+alias ard="arduino-cli"
+
+cd() {
+        wd="$(pwd)"
+        if [ -n "$1" ];then
+                command cd $*
+                ls .
+        else
+                command cd ~
+                ls ~
+        fi
+}
+back() {
+        cd $wd
+}
+
+wemux-start() {
+	wemux start ssh
+	sudo chmod 1777 /tmp/wemux-ssh
+	wemux attach ssh
+}
